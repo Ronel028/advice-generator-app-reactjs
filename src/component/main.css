@@ -1,0 +1,120 @@
+
+.main--title{
+	width: 100%;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-bottom: 30px;
+}
+.main--title h1{
+	color: white;
+}
+.card{
+	background-color: darkorange;
+	width: 500px;
+	height: 300px;
+
+	border-radius: 20px;
+	padding: 10px;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	position: relative;
+}
+
+.card .card--content h2{
+	text-align: center;
+	color: white;
+	max-width: 400px;
+}
+
+.card-generate-btn{
+	position: absolute;
+	bottom: -22px;
+	left: 50%;
+	transform: translateX(-50%);
+
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	border: none;
+	background-color: darksalmon;
+	cursor: pointer;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	transition: all 0.2s ease-in-out;
+}
+
+.card-generate-btn:hover{
+	background-color: white;
+}
+
+/*.loading{
+	margin-bottom: 10px;
+	color: white;
+}*/
+
+.loading{
+	width: 100%;
+	height: 100%;
+	background-color: rgba(255, 255, 255, 88%);
+	border-radius: 20px;
+
+	position: absolute;
+	top: 0;
+	left: 0;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.d-none{
+	display: none;
+}
+
+.card p{
+	font-size: 20px;
+	font-weight: 700;
+}
+
+.loading-circle{
+	display: flex;
+	gap: 5px;
+}
+.loading-circle > div{
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
+	background-color: white;
+	animation: animateLoading ;
+	animation-iteration-count: infinite;
+	animation-duration: 1s;
+	animation-timing-function: linear;
+	animation-direction: alternate;
+}
+.loading-circle div.circle-1{
+	animation-delay: 3s;
+}
+.loading-circle div.circle-2{
+	animation-delay: 2s;;
+}
+.loading-circle div.circle-3{
+	animation-delay: 1s;
+}
+
+
+@keyframes animateLoading{
+	from {
+		background-color: white;
+	}
+	to {
+		background-color: darkcyan;
+	}
+	
+}
